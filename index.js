@@ -83,7 +83,7 @@ app.post('/generate-pdf', async (req, res) => {
     
 
     // Add a logo image
-    const logoPath = path.join(__dirname, 'assets', 'logo.png'); // Ensure you have a 'logo.png' in the 'assets' folder
+    const logoPath = path.join(__dirname, 'assets', 'newlogo.png'); // Ensure you have a 'logo.png' in the 'assets' folder
     const logoBytes = fs.readFileSync(logoPath);
     const logoImage = await pdfDoc.embedPng(logoBytes); // Use embedJpg if the logo is a JPG
     const logoDims = logoImage.scale(0.3); // Scale the logo to fit
